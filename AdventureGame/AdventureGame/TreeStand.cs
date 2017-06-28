@@ -20,12 +20,16 @@ namespace AdventureGame
             switch (stand)
             {
                 case "ground blind":
-                    Console.WriteLine("You accidentally set up your "+stand+" on a underground bee's nest and got attacked! Better luck next time ");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("You accidentally set up your "+stand+" on a underground bee's nest and got attacked! Better luck next time. ");
+                    Console.ResetColor();
                     Console.ReadKey();
                     Environment.Exit(0);
                     break;
                 case "tree stand":
+                    Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine("You picked a great spot to set up your " + stand + "! It looks like this spot has a lot of deer activity!");
+                    Console.ResetColor();
                     Deer ChooseDeer = new Deer();
                     ChooseDeer.Pickdeer();
                     break;
